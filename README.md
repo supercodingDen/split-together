@@ -2,11 +2,21 @@
 
 **Split the bill. Keep the good times.**
 
+## Use it online
+
+### [Open Split Together →](https://yiqi-a-split-mate-1028.suguyy.chatgpt.site/)
+
+**Ready to use in your browser. No installation, deployment, or account required.**
+
+1. Open the website and create a ledger, or try the example first.
+2. Add expenses or collect receipt photos from your friends.
+3. Review everyone’s share and share the settlement summary.
+
+Works on your phone, tablet, or computer. You can switch between English and Chinese.
+
 Dinner is over. One friend paid for food, another covered the ride, and the receipts are scattered across everyone’s phones. Working out who owes what shouldn’t become the last activity of the night.
 
 Split Together brings those expenses into one shared ledger, so everyone can see their share and how to settle up.
-
-[Try the live demo](https://yiqi-a-split-mate-1028.suguyy.chatgpt.site/) · [Run it locally](#run-locally)
 
 ![Split Together — a shared expense ledger](docs/images/home.png)
 
@@ -25,7 +35,19 @@ I wanted a small tool for a familiar problem: friends pay for different things, 
 
 Amounts are stored as integer cents. Receipt recognition runs in the browser, and its results always need a human check. Admin, receipt-upload, and read-only links have separate access rights. Anyone holding a link has its permissions, so keep the admin link private.
 
-## Run locally
+## A few boundaries
+
+This is a personal project, not a payment service. It suggests how to settle up; it doesn’t move money or convert currencies. Receipt recognition can make mistakes, especially with unclear photos. Review the amounts before saving.
+
+Third-party libraries and bundled OCR resources keep their own licenses. See [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## For developers
+
+The hosted website above is the easiest way to use Split Together. Local setup is optional, for exploring or changing the code.
+
+<details>
+<summary>Optional: run the source code locally</summary>
+
 
 You’ll need Node.js 22.13+ and npm.
 
@@ -46,8 +68,4 @@ npm run build
 
 Built with React, TypeScript, Vinext, Cloudflare Workers, D1, R2, and Tesseract.js. See [development notes](docs/development.md) for browser checks and hosting.
 
-## A few boundaries
-
-This is a personal project, not a payment service. It suggests how to settle up; it doesn’t move money or convert currencies. Receipt recognition can make mistakes, especially with unclear photos. Review the amounts before saving.
-
-Third-party libraries and bundled OCR resources keep their own licenses. See [third-party notices](THIRD_PARTY_NOTICES.md).
+</details>
