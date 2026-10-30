@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `evidence_room_fingerprint` ON `evidence` (`room`,`fingerprint`);
